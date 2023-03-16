@@ -19,7 +19,6 @@ do {
     ciudades.push(ciudad)
    }   
 } while (confirm("Desea agregar mas ciudades?"));
-console.log(ciudades)
 if (ciudades.length === 0){
     document.write('<section class="container">')
     document.write('<h3 class="text-center text-danger display-4">No se ingresaron ciudades</h3>')
@@ -36,10 +35,8 @@ if (ciudades.length === 0){
     document.write(`<p class="fw-bold display-5 text-warning">Elemento en la tercera posición: ${ciudades[2]}</h3>`)
     document.write(`<p class="fw-bold display-5 text-danger">Elemento en la última posición: ${ciudades[ciudades.length-1]}</h3>`)
     ciudades.push("Paris")
-    console.log(ciudades)
     document.write(`<p class="fw-bold display-5 text-secondary">Elemento en la segunda posición: ${ciudades[1]}</h3>`)
     ciudades[1] = "Barcelona"
-    console.log(ciudades)
     document.write('<h3 class="text-center text-success display-4">Arreglo resultante luego de las modificaciones</h3>')
     document.write('<ul class="list-group">')
     for (let i = 0; i < ciudades.length; i++) {
