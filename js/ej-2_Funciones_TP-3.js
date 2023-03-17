@@ -1,37 +1,43 @@
 /*
-Ejercicio 5
-Realizar una página con un script que calcule el valor de la letra 
-de un número de DNI (Documento nacional de identidad).
-
-El algoritmo para calcular la letra del dni es el siguiente :
-
-El número debe ser entre 0 y 99999999
-Debemos calcular el resto de la división entera entre el número y el número 23.
-Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes: 
-(T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E) 
-Si lo introducido no es un número deberá indicarse con un alert y 
-volver a preguntar.
-Deberá de repetirse el proceso hasta que el usuario pulse «cancelar».
+Ejercicio 2 - Funciones
+Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento.
+A partir de la cadena que se le pasa, la función determina si esa cadena está formada 
+sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.
 */
-let dni;
-let continuar = false;
-const letrasSegunResto = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"]
-let letraAsignada = "";
-do {
-    dni = parseInt(prompt("Ingrese un número de DNI"))
-    if (isNaN(dni) || (dni < 0 && dni > 99999999)){
-        alert("No ingresó un número válido")
-        continuar = confirm("Desea repetir el ingreso de DNI?")
-    }else if (dni >= 0 && dni <= 99999999){
-        resto = dni % 23
-        letraAsignada = letrasSegunResto[resto]
-        document.write(`<h5 class="display-3 text-center">Resultado</h5>"`);
-        document.write(`<p class="text-center text-success fs-1">El número de DNI ingresado es ${dni}</p>"`);
-        document.write(`<p class="text-center text-success fs-1">La letra asignada según su DNI es ${letraAsignada}</p>"`);
-        continuar = confirm("Desea ingresar otro número de DNI?")
+function tipoDeLetras(frase) {
+    let fraseMayusculas = frase.toUpperCase()
+    let fraseMinusculas = frase.toLowerCase()
+    for (let i = 0; i < frase.length; i++) {
+        switch (frase) {
+            case fraseMayusculas:
+                return "La cadena de texto contiene sólo mayúsculas"
+                break;
+            case fraseMinusculas:
+                return "La cadena de texto contiene sólo minúsculas"
+                break;
+            default:
+                return "La cadena de texto contiene una mezcla de mayúsculas y minúsculas"
+                break;
+        }
     }
-} while (continuar);
-
-if(letraAsignada===""){
-    document.write(`<p class="text-center text-danger fs-1">No ingresó un número de DNI.</p>"`);
 }
+
+let frase = "";
+let condicion = true;
+do {
+    frase = prompt("Ingrese una cadena de texto para ser evaluada:")
+    if (frase === "" || frase === null || frase === undefined ) {
+        alert("Ingrese una cadena de texto válida")
+        condicion = true;
+    }else{
+        condicion = false
+    }
+} while (condicion && confirm("Desea agregar una cadena de texto?"));
+
+if (condicion === true){
+    document.write(`<p class="text-center text-danger fs-1">No ingresó una cadena de texto válida</p>"`);
+}
+
+const resultado = tipoDeLetras(frase)
+document.write(`<h5 class="display-3 text-center">Resultado de la funcion</h5>"`);
+document.write(`<p class="text-center text-success fs-1">${resultado}</p>"`);
