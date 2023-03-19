@@ -20,3 +20,28 @@ Ejemplo de salida:
 |  11  |      6      |
 |  12  |      2      |
 */
+
+let apariciones = [];
+for (let lanzamiento = 0 ; lanzamiento < 50 ; lanzamiento++) {
+    let dado1 = Math.floor(Math.random() * 6 + 1);
+    let dado2 = Math.floor(Math.random() * 6 + 1);
+    let sumaLanzamiento = dado1 + dado2;
+    apariciones.push(sumaLanzamiento)
+}
+
+
+document.write("<section class='container text-center'>")
+document.write('<table class="table table-responsive table-striped w-25 text-center">')
+document.write("<thead>")
+document.write("<tr><th>Suma</th><th>Apariciones</th></tr>")
+document.write("</thead>")
+document.write("<tbody>")
+for (let i = 0; i < apariciones.length; i++) {
+    document.write(`<tr>
+                    <td>${sumaLanzamiento}}</td>
+                    <td>${apariciones}</td>
+                </tr>`) 
+}
+document.write("</tbody>")
+document.write("</table>")
+document.write("</section>")
