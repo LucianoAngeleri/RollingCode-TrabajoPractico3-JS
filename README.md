@@ -2,11 +2,15 @@
 En este trabajo práctico realizamos diferentes ejercicios para aprender algunos conceptos básicos del lenguaje JavaScript.
 Se resolvió haciendo uso de los conceptos aprendidos previamente en el Trabajo Práctico N°1, Trabajo Práctico N°2 y se integraron nuevos conocimientos:
 * Arrays
-    * `()`
+    * Declaracion de un arreglo con varios elementos `array = [1,valor2,...,valorN]`
+    * Asignación de un elemento al arreglo en una posicion específica con `array[i] = valor`
+    * Añadir un elemento en la la última posición del arreglo con `array.push(valor)`
+    * Acceso de la longitud del arreglo (cantidad de elementos) con `array.length`
 * Funciones
-    * `()`
+    * Creación de funciones declarativas con `function nombreFuncion(parametro1,parametro2) { código a ejecutar }`
+    * Llamado o invocación de funciones con `nombreFuncion(parametro1,parametro2)`
 ## Uso de GIT
-Tomamos como base el Trabajo Práctico N°2, copiamos su estructura e hicimos el commit inicial. Se creó una rama `dev` a partir de la rama `main`. Luego por cada ejercicio se creo una rama `ejercicioN` donde se trabajó la resolución del ejercicio correspondiente a esa rama y luego se unieron los cambios a la rama `dev`. Una vez finalizados todos los ejercicios y comprobado que funcionan correctamente, se unió la rama `dev` a la rama `main` para tener todos los cambios. 
+Tomamos como base el Trabajo Práctico N°2, copiamos su estructura e hicimos el commit inicial. Se creó una rama `dev` a partir de la rama `main`. Luego por cada ejercicio se creo una rama `ejercicioNTema` donde se trabajó la resolución del ejercicio correspondiente a esa rama y luego se unieron los cambios a la rama `dev`. Una vez finalizados todos los ejercicios y comprobado que funcionan correctamente (se efectuaron algunas correcciones menores directamente en la rama `dev` por cuestiones prácticas), se unió la rama `dev` a la rama `main` para tener todos los cambios. 
 ## Ejercicios JavaScript
 ### Prácticas con arreglos y funciones
 -------------------
