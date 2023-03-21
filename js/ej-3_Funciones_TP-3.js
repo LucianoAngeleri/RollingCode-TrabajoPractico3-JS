@@ -33,16 +33,16 @@ do {
 
 if (condicion) {
   document.write('<section class="container">');
-  document.write(`<h5 class="display-5 text-center text-danger">No ingresó números válidos.</h5>"`);
+  document.write(`<h5 class="display-5 text-center text-danger">No ingresó números válidos.</h5>`);
   document.write("</section>");
 } else {
   resultado = perimetro(lado1, lado2);
   document.write('<section class="container">');
   document.write(
-    `<h5 class="display-5 text-center">Resultado de la función para calcular el perímetro de un rectángulo</h5>"`
+    `<h5 class="display-5 text-center">Resultado de la función para calcular el perímetro de un rectángulo</h5>`
   );
   document.write(
-    `<p class="text-center text-success fs-1">El perimetro del rectángulo de lado ${lado1} y ${lado2} es: ${resultado}</p>"`
+    `<p class="text-center text-success fs-1">El perimetro del rectángulo de lado ${lado1} y ${lado2} es: ${resultado}</p>`
   );
   document.write("</section>");
 }
