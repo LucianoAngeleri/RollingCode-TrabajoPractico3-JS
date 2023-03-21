@@ -33,9 +33,9 @@ do {
   }
 } while (condicion);
 if (isNaN(num)) {
-    document.write("<section class='container'>");
-    document.write(`<h5 class='display-3 text-center text-danger'>No ingresó un número válido</h5>`);
-    document.write("</section>");
-}else{
-    mostrarTablaMultiplicar(num);
-    }
+  document.write("<section class='container'>");
+  document.write(`<h5 class='display-3 text-center text-danger'>No ingresó un número válido</h5>`);
+  document.write("</section>");
+} else {
+  mostrarTablaMultiplicar(num);
+}
